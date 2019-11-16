@@ -12,9 +12,9 @@ public class Dashboard extends BasePage {
 
     By recentTransactionsTable = By.cssSelector(".element-wrapper:nth-child(2)");
     By recentTransactionsTable_AmountHeader = By.id("amount");
-    By statusColumn = By.xpath("//td[@class='nowrap']/span[2]");
-    By tableDate = By.xpath("//table[@id='transactionsTable']/tbody/tr/td[2]/span[1]");
-    By tableTime = By.xpath("//table[@id='transactionsTable']/tbody/tr/td[2]/span[2]");
+    By statusColumn = By.cssSelector(".nowrap:nth-of-type(1)");
+    By tableDate = By.cssSelector("#transactionsTable tbody tr td:nth-of-type(2)");
+    By tableTime = By.cssSelector("#transactionsTable tbody tr td:nth-of-type(2) span:nth-of-type(2)");
     By tableDescription = By.cssSelector(".cell-with-media span");
     By tableCategory = By.cssSelector(".text-center a");
     public By tableAmount = By.cssSelector("#transactionsTable tbody tr td:nth-of-type(6)");
