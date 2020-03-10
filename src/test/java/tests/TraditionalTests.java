@@ -46,7 +46,6 @@ public class TraditionalTests {
         Login login = new Login(driver);
         login.fetch(URL);
         login.clickLoginButton();
-
         assertEquals(login.getLoginErrorText(), "Both Username and Password must be present");
     }
 
@@ -56,7 +55,6 @@ public class TraditionalTests {
         login.fetchURL();
         login.enterPasswordText("password");
         login.clickLoginButton();
-
         assertEquals(login.getLoginErrorText(), "Username must be present");
     }
 
@@ -86,8 +84,7 @@ public class TraditionalTests {
 
     @Test
     public void assertRecentTransactionsIsAscending() {
-
-        // 3. Once logged in (use any username and password to login), view the Recent Transactions table. Your test should click on the "Amounts" header, and verify that the column is in ascending order and that each row’s data stayed in tact after the sorting.
+        
         Login login = new Login(driver);
         login.fetchURL();
         login.enterUserNameText("JohnSmith");
